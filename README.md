@@ -19,4 +19,4 @@ Electrical Circuit Neural Network fused into a Quantum Computer using Photons
 - Quantum Physics
 
 ## Circuits
-![Buffer0](/Epoch/buffer0.PNG?raw=true "OFF GATE")
+![Buffer0](/buffer0.PNG?raw=true "OFF GATE")
