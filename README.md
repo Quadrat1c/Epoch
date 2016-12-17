@@ -1,6 +1,8 @@
 # Epoch
 
 ## What is Epoch?
+Epoch is the beginning of a distinctive period in the history of someone or something.
+
 First we build an electrical circuit using logic gates to create a real electrical neural network.
 Now we somehow fuse this in with a Quantum Computer concept that uses photons.
 
