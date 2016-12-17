@@ -11,8 +11,9 @@ After the recipe is mixed you get a learning AI that can go back in time or mayb
 ### ECNN-QCP (Code name: Epoch)
 Electrical Circuit Neural Network fused into a Quantum Computer using Photons
 
-## Skill Tree
-- Programming [||||||----]
-- Logic Gates [|||||-----]
-- Neural Networks [|||-------]
-- Quantum Physics [||||------]
+## Arcane Arts
+- Programming
+- Logic Gates
+- Electronic Circuits
+- Neural Networks
+- Quantum Physics
