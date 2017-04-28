@@ -1,0 +1,6 @@
+0.1 [Complete]
+- Connect to Epoch & count clock ticks, then implement methods and functions.
+- Implement already build things like AI, Crypto, Data/Text etc
+- Create algotelli
+- Create Warden
+- Create controllable neural network
