@@ -22,12 +22,7 @@ namespace Epoch
 
         public void Run()
         {
-            writer.WriteLine(@"___________                    .__     ");
-            writer.WriteLine(@"\_   _____/_____   ____   ____ |  |__  ");
-            writer.WriteLine(@" |    __)_\____ \ /  _ \_/ ___\|  |  \ ");
-            writer.WriteLine(@" |        \  |_> >  <_> )  \___|   Y  \");
-            writer.WriteLine(@"/_______  /   __/ \____/ \___  >___|  /");
-            writer.WriteLine(@"        \/|__|               \/     \/ ");
+            writer.WriteLine(cmd.intro());
             // get clients ip address
 
             // command loop - swtch
@@ -35,11 +30,21 @@ namespace Epoch
             {
                 switch (line)
                 {
+                    // [Main]
                     case "test":
                         writer.WriteLine("[CB} Test");
                         break;
 
-                    case "exit":
+                    case "help":
+                        writer.WriteLine(cmd.help());
+                        break;
+
+                    case "about":
+                        writer.WriteLine(cmd.about());
+                        break;
+
+                    case "ver":
+                        writer.WriteLine(cmd.version());
                         break;
 
                     default:
