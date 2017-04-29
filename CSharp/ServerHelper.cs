@@ -21,7 +21,7 @@ namespace Epoch
 
         public static string about()
         {
-            return "Epoch the beginning of a distinctive period of history of someone or something." + "r\n" +
+            return "Epoch the beginning of a distinctive period of history of someone or something." + "\r\n" +
                 "";
         }
 
