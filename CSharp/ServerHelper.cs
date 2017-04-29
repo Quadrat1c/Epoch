@@ -15,7 +15,7 @@ namespace Epoch
                 @" |        \  |_> >  <_> )  \___|   Y  \ " + "\r\n" +
                 @"/_______  /   __/ \____/ \___  >___|  / " + "\r\n" +
                 @"        \/|__|               \/     \/  " + "\r\n" + "\r\n" +
-                "ECNN-QCP (Epoch) " + version()  + " - Type `help` for a list of commands." + "\r\n";
+                "ECNN-QCP (Epoch) " + version() + " - Type `help` for a list of commands." + "\r\n";
             //return intro;
         }
 
@@ -48,7 +48,7 @@ namespace Epoch
 
         public static string history()
         {
-            return "ECNN-QCP (Epoch) " + version() + " - Type `help` for a list of commands." + "\r\n" +
+            return "ECNN-QCP (Epoch) " + version() + "\r\n" +
                 "[0.1.2] Beginning platform \r\n";
         }
     }
