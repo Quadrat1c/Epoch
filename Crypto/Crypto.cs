@@ -69,7 +69,7 @@ namespace QuadKeyExchange
             Console.WriteLine($"Public Key: {twoPublicKey}");
             Console.ResetColor();
 
-            Console.Write("\r\n--------------- Step 5 ---------------\r\n");
+            Console.Write("\r\n--------------- Step 4 ---------------\r\n");
             Console.WriteLine("First person creates final secret key.");
             Console.WriteLine("power(b, x, n) [second persons public key], [first persons private key], [first persons first prime]");
             Console.ForegroundColor = ConsoleColor.DarkRed;
