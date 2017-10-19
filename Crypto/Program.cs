@@ -9,7 +9,7 @@ namespace QuadKeyExchange
             // Key Exchange Stress Test
             Console.Write("Input number of exchanges: ");
             long tries = Convert.ToInt64(Console.ReadLine());
-            crypto.KeyExchangeStressTest(tries);
+            Crypto.KeyExchangeStressTest(tries);
 
             Console.ReadLine();
 
@@ -18,7 +18,7 @@ namespace QuadKeyExchange
             Console.ForegroundColor = ConsoleColor.Black;
             Console.WriteLine("Quad Encryption Demo");
             Console.ResetColor();
-            crypto.KeyExchange();
+            Crypto.KeyExchange();
 
             Console.ReadLine();
         }
