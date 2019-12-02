@@ -1,0 +1,54 @@
+*Pick And Place List
+*Company=
+*Author=
+*eMail=
+*
+*Project=KTerMR1
+*Date=10:22:39
+*CreatedBy=Fritzing 0.9.3b.04.19.5c895d327c44a3114e5fcc9d8260daf0cbb52806
+*
+*
+*Coordinates in mm, always center of component
+*Origin 0/0=Lower left corner of PCB
+*Rotation in degree (0-360, math. pos.)
+*
+*No;Value;Package;X;Y;Rotation;Side;Name
+1;;THT;55.8094;-40.5694;0;Bottom;D12
+2;;THT;60.8894;-40.5694;0;Bottom;10
+3;;THT;43.1094;-42.4744;0;Bottom;A0
+4;220;THT;50.7294;-47.5544;0;Bottom;R6
+5;220;THT;7.54944;-36.1244;0;Bottom;R1
+6;;THT;52.1695;-19.1484;-45;Bottom;XTAL1
+7;;THT;32.3144;-21.5194;0;Bottom;RX
+8;;THT;74.2244;-47.5544;0;Bottom;COUT
+9;;;7.24139;-52.6488;0;Top;TXT1
+10;;THT;38.0294;-42.4744;0;Bottom;A2
+11;220;THT;68.5094;-23.4244;0;Bottom;R3
+12;;5 mm [THT];64.0644;-49.4432;180;Bottom;LED3
+13;100nF;200 mil [THT, multilayer];53.9044;-10.0894;-90;Bottom;C4
+14;;THT;58.9844;-11.9944;0;Bottom;D5
+15;;THT;29.1394;-21.5194;0;Bottom;CLK
+16;;THT;40.5694;-13.8994;0;Bottom;D3
+17;;5 mm [THT];6.27944;-41.8556;0;Bottom;LED1
+18;;THT;63.4294;-40.5694;0;Bottom;9
+19;;THT;40.5694;-42.4744;0;Bottom;A1
+20;1µF;100 mil [THT, electrolytic];7.54944;-29.7744;0;Bottom;C2
+21;;;67.2427;-30.8474;0;Bottom;IMG1
+22;;dip;46.9194;-31.0444;-90;Bottom;328 MCU
+23;;THT;43.1094;-13.8994;0;Bottom;D4
+24;;THT;32.9494;-42.4744;0;Bottom;A4
+25;;5 mm [THT];73.0539;-10.0894;0;Bottom;LED2
+26;220;THT;63.4294;-17.0744;0;Bottom;R5
+27;220;THT;65.9694;-20.2494;0;Bottom;R4
+28;3V;;5.00944;-3.7394;90;Bottom;+ -
+29;100nF;200 mil [THT, multilayer];50.7294;-10.0894;-90;Bottom;C3
+30;;THT;35.4894;-21.5194;0;Bottom;TX
+31;;THT;30.4094;-42.4744;0;Bottom;A5
+32;;THT;48.1894;-40.5694;0;Bottom;AREF
+33;;;12.8288;-52.4187;0;Bottom;TXT2
+34;;THT;58.3494;-40.5694;0;Bottom;11
+35;;THT;35.4894;-42.4744;0;Bottom;A3
+36;1µF;100 mil [THT, electrolytic];5.00944;-11.9944;180;Bottom;C1
+37;220;THT;29.1394;-12.6294;90;Bottom;R2
+38;3.3V;TO220 [THT];6.27944;-20.5034;0;Bottom;U1
+39;;THT;38.0294;-13.8994;0;Bottom;D2
