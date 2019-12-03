@@ -6,15 +6,12 @@ Used for controlling and testing physical photon processing circuits. The goal i
 
 ### Features
 - Multitasking from one IC
+- [Development] Multicore Parallel Processing (Or some form of I2C)
 
 
 ## OS
 - Multithreading
 - Serial Commands (Multi Character Commands)
-
-
-### Under Development
-- Multicore Parallel Processing (Or some form of I2C)
 
 
 ## PCB
