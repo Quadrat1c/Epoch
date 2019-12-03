@@ -1,5 +1,5 @@
 /*
- * KTerM v1.0.1
+ * KTerM v1.0.2
  * Atmega328 Operating System
  * Designed to run the KTerM IC Computer
  * This is designed to demo the KTerMR1 PCB Board and test functionality of Multitasking.
@@ -11,22 +11,17 @@
  * Revisions:
  *  v1.0.1
  *      - Clock Speed fix. Can now go from 0-9999 without errors or command length issues.
+ *  v1.0.2
+ *      - Cleaned up lots of things
  */
-
-// Message Testing (?? Remove ??)
-/*
-char MessageArray[] = "               Multi-tasking DEMO:     The arduino is controlling the LED, the text, and the custom bar graph.                ";
-int MessageLength = strlen(MessageArray);
-String Message = MessageArray, Display;
-*/
 
 // Public Variables
 bool IsDebug = false;   // Debug mode shows command bytes
-//int ClockSpeed = 5;     // New clock speed is TaskDelay1
 int incomingByte = 0;   // Each byte is recieved one at a time through serial
 int command[20];        // Command Array
 int cmdIndex = 0;       // Keeps track of command array index
 String cmdStr = "";
+String ver = "1.0.2";
 
 // Pins
 int clockLED = 13,      // COUT clock output
@@ -40,8 +35,8 @@ int TaskTimer1 = 0,
     TaskTimer3 = 0;
 // Task Check Delay
 int TaskDelay1 = 300,   // Lower number is faster. Higher is slower tick rate.
-    TaskDelay2 = 250,   // 250mS
-    TaskDelay3 = 100;   // 100mS
+    TaskDelay2 = 5,   // 5mS
+    TaskDelay3 = 5;   // 5mS
 // Task Flags
 bool TaskFlag1 = false,
      TaskFlag2 = false,
@@ -78,20 +73,6 @@ void loop() {
         TaskFlag2 = false;
         // Do Something
         //Serial.println("Tick");
-        /*
-        int i, j, n;
-        for (i = 2; i <= 9999999; i++) {
-            int c = 0;
-            for (j = 1; j <= i; j++) {
-                if (i%j==0) {
-                    c++;
-                }
-            }
-
-            if (c == 2) {
-                Serial.println(i);
-            }
-        }*/
     }
 
     if (TaskFlag3) {
@@ -196,10 +177,23 @@ void RunCommand(String cmd)
     if (cmd == "help")
     {
         setColor(0,255,0);
-        Serial.println("");
-        Serial.println("help - List of commands");
-        Serial.println("debug - Turn Debug Mode ON or OFF");
-        Serial.println("clock - Change Clock Speed 0-9999");
+        Serial.println("help; - List of commands");
+        Serial.println("about; - About KTerM and Version");
+        Serial.print("debug; - Turn Debug Mode ON or OFF");
+        Serial.print(" [Debug Mode]: ");
+        Serial.println(IsDebug);
+        Serial.print("clock; - Change Clock Speed 0-9999");
+        Serial.print(" [Current Clock Speed]: ");
+        Serial.println(TaskDelay1);
+        setColor(0,0,0);
+    }
+    else if (cmd == "about")
+    {
+        setColor(0,255,0);
+        Serial.println("KTerM is an IC Based Terminal Computer and Operating System for the Atmega328 Chip.");
+        Serial.print("Version: ");
+        Serial.println(ver);
+        Serial.println("Developed by: Kyle Muranyi");
         setColor(0,0,0);
     }
     else if (cmd == "debug")
@@ -208,13 +202,11 @@ void RunCommand(String cmd)
         if (IsDebug) 
         {
             IsDebug = false;
-            Serial.println("");
             Serial.println("Debug mode OFF");
         }
         else if (!IsDebug)
         {
             IsDebug = true;
-            Serial.println("");
             Serial.println("Debug mode ON");
         }
         setColor(0,0,0);
