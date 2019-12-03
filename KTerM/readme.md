@@ -1,13 +1,22 @@
 # KTerM
 
 ### KTerM is an IC Based Terminal Computer and Operating System for the Atmega328 Chip.
-Used for controlling and testing physical photon processing circuits.
+Used for controlling and testing physical photon processing circuits. The goal is to create everything without using any external libraries and keeping this simple as possible.
+
 
 ### Features
 - Multitasking from one IC
 
+
+### Under Development
+- Multicore Parallel Processing (Or some form of I2C)
+
+
 ## OS
-OS features multithreading and serial commands multi character.
+- Multithreading
+- Serial Commands (Multi Character Commands)
+
+
 
 ## PCB
 PCB is a simple two layer board using DIP for IC connections.
