@@ -197,7 +197,7 @@ void RunCommand(String cmd)
     {
         setColor(0,255,0);
         Serial.println("");
-        Serial.println("Help - List of commands");
+        Serial.println("help - List of commands");
         Serial.println("debug - Turn Debug Mode ON or OFF");
         Serial.println("clock - Change Clock Speed 0-9999");
         setColor(0,0,0);
