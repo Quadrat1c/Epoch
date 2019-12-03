@@ -222,6 +222,8 @@ void RunCommand(String cmd)
     else if (cmd == "clock")
     {
         setColor(0,255,0);
+        Serial.print("Current Clock Speed: ");
+        Serial.println(TaskDelay1);
         Serial.println("Type in a clock speed 0-9999, lower = faster");
         Serial.println("All commands must end with ;");
         Serial.println("Example Clock Speed: 155;");
