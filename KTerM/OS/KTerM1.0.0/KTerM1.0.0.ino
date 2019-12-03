@@ -19,7 +19,7 @@ String Message = MessageArray, Display;
 
 // Public Variables
 bool IsDebug = false;   // Debug mode shows command bytes
-int ClockSpeed = 5;     // Lower number is faster. Higher is slower tick rate.
+//int ClockSpeed = 5;     // New clock speed is TaskDelay1
 int incomingByte = 0;   // Each byte is recieved one at a time through serial
 int command[20];        // Command Array
 int cmdIndex = 0;       // Keeps track of command array index
@@ -36,7 +36,7 @@ int TaskTimer1 = 0,
     TaskTimer2 = 0,
     TaskTimer3 = 0;
 // Task Check Delay
-int TaskDelay1 = 300,   // 300mS
+int TaskDelay1 = 300,   // Lower number is faster. Higher is slower tick rate.
     TaskDelay2 = 250,   // 250mS
     TaskDelay3 = 100;   // 100mS
 // Task Flags
@@ -75,6 +75,20 @@ void loop() {
         TaskFlag2 = false;
         // Do Something
         //Serial.println("Tick");
+        /*
+        int i, j, n;
+        for (i = 2; i <= 9999999; i++) {
+            int c = 0;
+            for (j = 1; j <= i; j++) {
+                if (i%j==0) {
+                    c++;
+                }
+            }
+
+            if (c == 2) {
+                Serial.println(i);
+            }
+        }*/
     }
 
     if (TaskFlag3) {
@@ -182,7 +196,7 @@ void RunCommand(String cmd)
         Serial.println("");
         Serial.println("Help - List of commands");
         Serial.println("debug - Turn Debug Mode ON or OFF");
-        Serial.println("clock - Change Clock Speed 70-9999");
+        Serial.println("clock - Change Clock Speed 101-9999");
         setColor(0,0,0);
     }
     else if (cmd == "debug")
@@ -205,10 +219,10 @@ void RunCommand(String cmd)
     else if (cmd == "clock")
     {
         setColor(0,255,0);
-        Serial.println("Type in a clock speed 70-9999, lower = faster");
+        Serial.println("Type in a clock speed 101-9999, lower = faster");
         bool clockComplete = false;
         int clockCmdIndex = 0;
-        int clockCommand[4];
+        int clockCommand[5];
         String clockCmdStr = "";
 
         while (!clockComplete)
@@ -222,21 +236,21 @@ void RunCommand(String cmd)
                 clockCmdIndex++;
             }
 
-            if (clockCmdIndex >= 4)
+            if (clockCmdIndex >= 5)
             {
                 // print full command array
-                for (int i = 0; i < 4; i++)
+                for (int i = 0; i < 5; i++)
                 {
                     clockCmdStr += decToString(clockCommand[i]);
                 }
                 
-                ClockSpeed = clockCmdStr.toInt();
+                //ClockSpeed = clockCmdStr.toInt();
                 TaskDelay1 = clockCmdStr.toInt();
                 Serial.println("");
-                Serial.println(ClockSpeed);
+                Serial.println(TaskDelay1);
 
-                if (ClockSpeed < 70) { ClockSpeed = 70; }
-                if (ClockSpeed > 9999) { ClockSpeed = 9999; }
+                if (TaskDelay1 < 101) { TaskDelay1 = 5; }
+                if (TaskDelay1 > 9999) { TaskDelay1 = 9999; }
                 clockComplete = true;
             }
         }
